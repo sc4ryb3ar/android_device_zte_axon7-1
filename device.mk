@@ -301,8 +301,3 @@ PRODUCT_COPY_FILES += \
 
 
 $(call inherit-product-if-exists, vendor/zte/axon7/axon7-vendor.mk)
-
-# Power HAL
-  PRODUCT_PACKAGES += \
-      power.axon7
-
