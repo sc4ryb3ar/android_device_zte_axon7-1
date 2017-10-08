@@ -72,13 +72,13 @@
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true
 BOARD_USES_WIPOWER := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/zte/axon7/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_HAS_QCA_BT_ROME := true
 WCNSS_FILTER_USES_SIBS := true
 
 # Boot animation
-  TARGET_BOOTANIMATION_HALF_RES := true
+#  TARGET_BOOTANIMATION_HALF_RES := true
 
 # BootLoader
   TARGET_BOOTLOADER_BOARD_NAME := ailsa_ii
@@ -169,7 +169,7 @@ WCNSS_FILTER_USES_SIBS := true
 # PowerHAL
 TARGET_POWERHAL_VARIANT := voxpopuli
 TARGET_USES_INTERACTION_BOOST := true
--include device/voxpopuli/sepolicy/sepolicy.mk
+ -include device/voxpopuli/sepolicy/sepolicy.mk
 
 # Properties
   TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
@@ -182,7 +182,7 @@ TARGET_USES_INTERACTION_BOOST := true
    TARGET_USE_SDCLANG := true
 
 # Recovery
-  TARGET_RECOVERY_FSTAB := device/zte/axon7/rootdir/etc/fstab.qcom
+  TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
   TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_axon7
   TARGET_RELEASETOOLS_EXTENSIONS := device/zte/axon7
 
@@ -190,9 +190,8 @@ TARGET_USES_INTERACTION_BOOST := true
   USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy (SeLinux)
-  BOARD_SEPOLICY_DIRS += \
-      device/zte/axon7/sepolicy
-  include device/qcom/sepolicy/sepolicy.mk
+  BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+   	include device/qcom/sepolicy/sepolicy.mk
 
 # TWRP
   TW_THEME := portrait_hdpi
