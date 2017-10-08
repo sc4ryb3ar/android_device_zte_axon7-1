@@ -70,16 +70,16 @@
   BOARD_USE_64BITMEDIA := false
 
 # Some framework code requires this to enable BT
-BOARD_HAVE_BLUETOOTH := true
-BOARD_USES_WIPOWER := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BOARD_HAS_QCA_BT_ROME := true
-WCNSS_FILTER_USES_SIBS := true
+	BOARD_HAVE_BLUETOOTH := true
+	BOARD_USES_WIPOWER := true
+	BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+	BOARD_HAVE_BLUETOOTH_QCOM := true
+	BOARD_HAS_QCA_BT_ROME := true
+	WCNSS_FILTER_USES_SIBS := true
 
 # Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+ TARGET_BOOTANIMATION_PRELOAD := true
+ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # BootLoader
   TARGET_BOOTLOADER_BOARD_NAME := ailsa_ii
@@ -90,6 +90,10 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
   TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 
 # Charger
+	BOARD_CHARGER_ENABLE_SUSPEND := true
+	BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
+# Enable real time lockscreen charging current values
   BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # CNE
@@ -132,7 +136,7 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Kernel
   BOARD_KERNEL_BASE := 0x80000000
-  BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff 
+  BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
   BOARD_KERNEL_PAGESIZE := 4096
   BOARD_KERNEL_TAGS_OFFSET := 0x00000100
   BOARD_RAMDISK_OFFSET     := 0x01000000
@@ -168,8 +172,8 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
   BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # PowerHAL
-TARGET_POWERHAL_VARIANT := voxpopuli
-TARGET_USES_INTERACTION_BOOST := true
+ TARGET_POWERHAL_VARIANT := voxpopuli
+ TARGET_USES_INTERACTION_BOOST := true
  -include device/voxpopuli/sepolicy/sepolicy.mk
 
 # Properties
@@ -222,7 +226,7 @@ TARGET_USES_INTERACTION_BOOST := true
   WIFI_DRIVER_FW_PATH_P2P := "p2p"
   WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-  # EAS 
+  # EAS
   ENABLE_CPUSETS := true
   ENABLE_SCHEDBOOST := true
 
