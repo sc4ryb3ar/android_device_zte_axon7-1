@@ -3,6 +3,9 @@ IS_ARM64 := true
 # Include Official OTA Package
 WITH_OFFICIALOTA := true
 
+# Support Beta OTA Opt-in (Requires additional ota xml)
+BETA_OTA := true
+ 
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/zte/axon7/apns-full-conf.xml:system/etc/apns-conf.xml
 
