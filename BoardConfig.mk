@@ -196,7 +196,8 @@
   USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy (SeLinux)
-  BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+  BOARD_SEPOLICY_DIRS += \
+	$(LOCAL_PATH)/sepolicy \
 	include device/qcom/sepolicy/sepolicy.mk
 
 # TWRP
