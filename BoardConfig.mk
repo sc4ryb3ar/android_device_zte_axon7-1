@@ -136,7 +136,7 @@
 
 # Kernel
   BOARD_KERNEL_BASE := 0x80000000
-  BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff 
+  BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
   BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
   BOARD_KERNEL_PAGESIZE := 4096
   BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -169,8 +169,8 @@
   BOARD_FLASH_BLOCK_SIZE := 262144
   TARGET_USERIMAGES_USE_EXT4 := true
   TARGET_USERIMAGES_USE_F2FS := true
-  #BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-  #BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
+  BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+  BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # PowerHAL
   TARGET_POWERHAL_VARIANT := voxpopuli
