@@ -98,6 +98,9 @@ ro.min_freq_4=307200
 # Qualcomm support
 persist.timed.enable=true
 
+# Fastdormancy
+persist.env.fastdorm.enabled=true
+
 # RIL (RADIO)
 DEVICE_PROVISIONED=1
 persist.data.iwlan.enable=true
