@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOTANIMATION_HALF_RES := true
+# TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -236,7 +236,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_axon7 
+    librecovery_updater_axon7
 
 # RIL
 PRODUCT_PACKAGES += \
