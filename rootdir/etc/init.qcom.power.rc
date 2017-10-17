@@ -58,7 +58,6 @@ on boot
     chown system system /dev/voxpopuli/touch_min_freq_little
 
 on enable-low-power
-
     # Disable thermal bcl hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/soc/soc:qcom,bcl/mode "disable"
@@ -151,7 +150,6 @@ on property:init.svc.recovery=running
 
 on property:dev.bootcomplete=1
     setprop sys.io.scheduler "bfq"
-
     # update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-1,3

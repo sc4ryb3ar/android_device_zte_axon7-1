@@ -168,10 +168,9 @@ on post-fs-data
     mkdir /data/misc/perfd 0755 root system
     chmod 2755 /data/misc/perfd
     mkdir /data/system/perfd 0770 root system
-    rm /data/system/perfd/default_values
     chmod 2770 /data/system/perfd
-      
-
+    rm /data/system/perfd/default_values
+    start perfd
 
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
@@ -270,6 +269,14 @@ on boot
     # add for Fingerprint wakeup accelerate
     chmod 0660 /sys/module/zte_misc/parameters/fp_msg_type
     chown system system /sys/module/zte_misc/parameters/fp_msg_type
+
+    # add for HALL interface permissions
+    chmod 0660 /sys/module/zte_hall/parameters/factory_mode
+    chmod 0660 /sys/module/zte_hall/parameters/hall_timer_debug
+    chmod 0660 /sys/module/zte_hall/parameters/hall_interrupt_count
+    chown root system /sys/module/zte_hall/parameters/factory_mode
+    chown root system /sys/module/zte_hall/parameters/hall_timer_debug
+    chown root system /sys/module/zte_hall/parameters/hall_interrupt_count
 
     # Create SWAP related dirs
     mkdir /data/system/swap 0770 root system
