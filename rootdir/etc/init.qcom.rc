@@ -184,6 +184,11 @@ on post-fs-data
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
 
+    # copy prebuilt qcril.db files always
+    copy /system/vendor/qcril.db /data/misc/radio/qcril_prebuilt.db
+    chown radio radio /data/misc/radio/qcril_prebuilt.db
+    chmod 0660 /data/misc/radio/qcril_prebuilt.db
+
     # File flags for prebuilt ril db file
     write /data/misc/radio/prebuilt_db_support 1
     chown radio radio /data/misc/radio/prebuilt_db_support
@@ -728,4 +733,10 @@ service fingerprintd /system/bin/fingerprintd
     class late_start
     user system
     onrestart restart gx_fpd
+    writepid /dev/cpuset/system-background/tasks
+
+service time_daemon /system/bin/time_daemon
+    class main
+    user root
+    group root
     writepid /dev/cpuset/system-background/tasks
