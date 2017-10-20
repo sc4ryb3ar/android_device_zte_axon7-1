@@ -108,7 +108,7 @@
 	<ctl name="DSP Downlink Status" value="off" />
 	<ctl name="DSP Uplink Status" value="off" />
 	<ctl name="DSP Mode" value="off" />
-	
+
 	<ctl name="Bargein Lch Sel" value="n/a" />
 	<ctl name="Bargein Rch Sel" value="n/a" />
     <ctl name="SLIMBUS_3_RX Port Mixer MI2S_TX" value="0" />
@@ -174,7 +174,7 @@
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia16" value="0" />
     <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="0" />
 
-<!--    
+<!--
 <ctl name="IIR1 INP1 MUX" value="ZERO" />
     <ctl name="SLIM0_RX_VI_FB_LCH_MUX" value="ZERO" />
     <ctl name="SLIM0_RX_VI_FB_RCH_MUX" value="ZERO" />
@@ -344,9 +344,9 @@
 	<ctl name="Smart PA Init Switch" value="Off" />
 	<ctl name="Receiver Switch" value="Off" />
 	<!-- Smart PA end-->
-	
+
 	<!-- Hi-Fi Audio -->
-	<ctl name="AKM HIFI Switch Sel" value="ak4961" />
+	<ctl name="AKM HIFI Switch Sel" value="ak4490" />
 	<ctl name="AKM HIFI Switch Mute" value="off" />
 	<ctl name="AKM HIFI PW" value="off" />
 	<ctl name="AK4490 BICK Frequency Select" value="48fs" />
@@ -2256,7 +2256,7 @@
         <ctl name="MIC Gain 1L" value="9" />
     </path>
 
-    <path name="voice-speaker-for-headphone-mic">	
+    <path name="voice-speaker-for-headphone-mic">
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="CP1 Clock Mode" value="500kHz" />
@@ -2746,7 +2746,7 @@
         <ctl name="SLIM RX2 MUX" value="SB1_PB" />
         <ctl name="SLIM_0_RX Channels" value="Two" />
         <ctl name="DAC1 Source Selector" value="SBI1" />
-        <!--ctl name="DAC1 Lch Mixer Lch_Switch" value="1" /--> 
+        <!--ctl name="DAC1 Lch Mixer Lch_Switch" value="1" /-->
         <ctl name="DAC1 Rch Mixer Rch_Switch" value="1" />
         <ctl name="HP Virt Switch" value="On" />
         <ctl name="HP Out Volume" value="19" />
@@ -2849,7 +2849,7 @@
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Uplink Status" value="on" />
         <ctl name="DSP Mode" value="sound_record" />
-        <ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />   
+        <ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="SBO1L Source Selector" value="DSPO1" />-->
         <ctl name="AIN2 PMMP Selector" value="MPWR1B" />
         <ctl name="Mic_1L input Selector" value="AIN2" />
@@ -2864,7 +2864,7 @@
         <ctl name="ES705 TX1 Enable" value="1" />
         <ctl name="Preset Array Uplink" id ="0" value="1151" />
         <ctl name="Preset Array Uplink" id ="1" value="863" />
-        <ctl name="Preset Array Uplink" id ="2" value="0" />                
+        <ctl name="Preset Array Uplink" id ="2" value="0" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="CP1 Clock Mode" value="500kHz" />
@@ -2873,7 +2873,7 @@
         <ctl name="MIC1L Selector" value="Analog" />
         <ctl name="SBO1L Source Selector" value="ADC1" />
         <ctl name="MIC Gain 1L" value="10" />
-    </path> 
+    </path>
 -->
 
     <path name="assist-bottom-mic">
@@ -2882,7 +2882,7 @@
 
     <path name="stereo-record-mic">
         <path name="handset-stereo-dmic-ef" />
-    </path> 
+    </path>
 
     <path name="directional-record-mic">
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1"/>
@@ -2921,11 +2921,11 @@
         <ctl name="SBO1L Source Selector" value="MIXAO" />
         <ctl name="MIC Gain 1L" value="9" />
         <ctl name="MIC Gain 1R" value="9" />
-    </path> 
+    </path>
 
     <path name="hifi-record-mic">
         <path name="handset-stereo-dmic-ef" />
-    </path> 
+    </path>
 
     <path name="faraway-record-mic">
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1"/>
@@ -2942,7 +2942,7 @@
         <ctl name="DSPI1 Source Selector" value="ADC1" />
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Uplink Status" value="on" />
-        <ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />   
+        <ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="SBO1L Source Selector" value="DSPO1" />
         <ctl name="MIC Gain 1L" value="2" />
         <ctl name="MIC Gain 1R" value="2" />
@@ -2960,12 +2960,12 @@
     </path>
 
     <path name="bargein-speaker-and-headset-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -2974,27 +2974,27 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
 		<ctl name="MIC Gain 1L" value="2" />
     </path>
 
     <path name="bargein-speaker-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -3003,27 +3003,27 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
 		<ctl name="MIC Gain 1L" value="2" />
     </path>
 
     <path name="bargein-headphone-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -3032,27 +3032,27 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
 		<ctl name="MIC Gain 1L" value="8" />
     </path>
 
     <path name="bargein-speaker-and-headphone-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -3061,17 +3061,17 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
 		<ctl name="MIC Gain 1L" value="2" />
     </path>
 
@@ -3085,20 +3085,20 @@
 		<ctl name="DSP Mode" value="voice_recognition" />
         <ctl name="DSPI1 Source Selector" value="ADC1" />
         <ctl name="DSP Sync Domain" value="slimbus" />
-        
+
         <ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
-        
+
 		<ctl name="SBO1L Source Selector" value="DSPO1" />
 		<ctl name="MIC Gain 1L" value="5" />
 	</path>
 
     <path name="driver-bargein-speaker-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -3107,27 +3107,27 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
         <ctl name="MIC Gain 1L" value="5" />
     </path>
 
     <path name="driver-bargein-headphone-mic">
-	
+
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SB1_CAP Mixer SLIM TX9" value="1" />
-		
+
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="AIN1 PMMP Selector" value="MPWR1A" />
 		<ctl name="PMMP1 CP1 Switch" value="On" />
@@ -3136,23 +3136,23 @@
 
         <ctl name="DSPI1 Source Selector" value="ADC1" />
 		<ctl name="DSPI3 Source Selector" value="SDTI2" />
-		
+
 		<ctl name="DSPO1 Mixer DSPI1_Switch" value="1" />
         <ctl name="DSPO3 Mixer DSPI3_Switch" value="1" />
 
         <ctl name="DSP Sync Domain" value="slimbus" />
         <ctl name="DSP Mode" value="voice_recognition" />
-		
+
         <ctl name="SBO1L Source Selector" value="DSPO3" />
         <ctl name="SBO1R Source Selector" value="DSPO3" />
         <ctl name="SBO2L Source Selector" value="DSPO1" />
-		
+
         <ctl name="MIC Gain 1L" value="9" />
     </path>
-    
+
      <!-- add for karaoke begin-->
     <path name="headphone-switch-to-karaoke">
-        <ctl name="DAC1 Source Selector" value="MIXAO" />  
+        <ctl name="DAC1 Source Selector" value="MIXAO" />
     </path>
 
     <path name="headphone-switch-to-karaoke-spk">
@@ -3286,8 +3286,8 @@
         <ctl name="HP Virt Switch" value="On" />
         <ctl name="HP Out Volume" value="19" />
     </path>
-    
-	
+
+
 <path name="headset-karaoke-spk-room-mic">
         <ctl name="CP1 Clock Mode" value="500kHz" />
         <ctl name="SB1_CAP Mixer SLIM TX7" value="1"/>
@@ -3316,7 +3316,7 @@
         <ctl name="SRCCO Sync Domain" value="slimbus" />
         <ctl name="SRCCI Source Selector" value="DSPO1" />
         <ctl name="SBO1L Source Selector" value="SRCCO" />
-        <ctl name="SBO1R Source Selector" value="SRCCO" />                 
+        <ctl name="SBO1R Source Selector" value="SRCCO" />
         <ctl name="SRCDO Sync Domain" value="slimbus" />
         <ctl name="SRCDI Source Selector" value="DSPO3" />
         <ctl name="MIXAI1 Source Selector" value="SBI1" />
@@ -3359,7 +3359,7 @@
         <ctl name="SRCCO Sync Domain" value="slimbus" />
         <ctl name="SRCCI Source Selector" value="DSPO1" />
         <ctl name="SBO1L Source Selector" value="SRCCO" />
-        <ctl name="SBO1R Source Selector" value="SRCCO" />                 
+        <ctl name="SBO1R Source Selector" value="SRCCO" />
         <ctl name="SRCDO Sync Domain" value="slimbus" />
         <ctl name="SRCDI Source Selector" value="DSPO3" />
         <ctl name="MIXAI1 Source Selector" value="SBI1" />
@@ -3402,7 +3402,7 @@
         <ctl name="SRCCO Sync Domain" value="slimbus" />
         <ctl name="SRCCI Source Selector" value="DSPO1" />
         <ctl name="SBO1L Source Selector" value="SRCCO" />
-        <ctl name="SBO1R Source Selector" value="SRCCO" />                 
+        <ctl name="SBO1R Source Selector" value="SRCCO" />
         <ctl name="SRCDO Sync Domain" value="slimbus" />
         <ctl name="SRCDI Source Selector" value="DSPO3" />
         <ctl name="MIXAI1 Source Selector" value="SBI1" />
