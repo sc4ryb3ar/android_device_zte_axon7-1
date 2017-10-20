@@ -339,10 +339,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	  ro.min_freq_0=307200 \
 	  ro.min_freq_4=307200
 
-# Performance / IOP
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/public.libraries.txt:system/vendor/etc/public.libraries.txt
-
 # Power HAL
 PRODUCT_PACKAGES += \
 	  power.msm8996
