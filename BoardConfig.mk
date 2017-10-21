@@ -98,7 +98,7 @@
 
 # Charger
   BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
-  
+
 # CNE
   BOARD_USES_QCNE := true
 
@@ -138,7 +138,7 @@
   TARGET_KERNEL_ARCH := arm64
   TARGET_KERNEL_HEADER_ARCH := arm64
   TARGET_KERNEL_SOURCE := kernel/zte/msm8996
-  TARGET_KERNEL_CONFIG := lineageos_axon7_defconfig
+  TARGET_KERNEL_CONFIG := axon_defconfig
   TARGET_KERNEL_HAVE_EXFAT := true
   TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
