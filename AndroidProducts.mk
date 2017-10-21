@@ -299,7 +299,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 		  media.aac_51_output_enabled=true \
-			drm.service.enabled=1 \
 	    vidc.debug.perf.mode=2 \
 	    vidc.enc.disable.pq=true \
 	    vidc.enc.dcvs.extra-buff-count=2
