@@ -22,19 +22,19 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # ANT
 PRODUCT_PACKAGES += \
-		AntHalService \
-		com.dsi.ant.antradio_library \
-		libantradio
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
 
 PRODUCT_COPY_FILES += \
-		external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Audio
 PRODUCT_PACKAGES += \
-		audio.a2dp.default \
-		audio.r_submix.default \
-		audio.usb.default \
-		libaudio-resampler \
+    audio.a2dp.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
     libvolumelistener \
     tinymix \
     audio_amplifier.msm8996 \
@@ -66,45 +66,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-		audio.deep_buffer.media=true \
-		audio.dolby.ds2.enabled=false \
-		audio.dolby.ds2.hardbypass=false \
-		audio_hal.period_size=192 \
-		audio.offload.buffer.size.kb=64 \
-		audio.offload.gapless.enabled=true \
-		audio.offload.min.duration.secs=30 \
-		audio.offload.multiaac.enable=true \
-		audio.offload.multiple.enabled=true \
-		audio.offload.passthrough=false \
-		audio.offload.pcm.16bit.enable=true \
-		audio.offload.pcm.24bit.enable=true \
-		audio.offload.track.enable=true \
-		audio.offload.video=true \
-		audio.safx.pbe.enabled=true \
-		media.stagefright.audio.sink=280 \
-		persist.audio.fluence.speaker=true \
-		persist.audio.fluence.voicecall=true \
-		persist.audio.fluence.voicerec=false \
-		persist.audio.ssr.3mic=false \
-		ro.qc.sdk.audio.fluencetype=fluence \
-		ro.qc.sdk.audio.ssr=false \
-		tunnel.audio.encode=false \
-		use.qti.sw.ape.decoder=true \
-		use.voice.path.for.pcm.voip=true
-
 # Bluetooth
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-		persist.bt.enableAptXHD=true \
-    bt.max.hfpclient.connections=1 \
-    qcom.bluetooth.soc=rome \
-    ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true
 
 # Busybox v1.26.2-Stericson
 PRODUCT_COPY_FILES += \
@@ -125,16 +90,7 @@ PRODUCT_COPY_FILES += \
 		frameworks/native/data/etc/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml \
 		frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-		persist.camera.gyro.disable=0 \
-		persist.camera.preview.ubwc=0 \
-		persist.camera.video.ubwc=0 \
-		persist.camera.stats.test=5 \
-		persist.camera.HAL3.enabled=1 \
-		camera.disable_zsl_mode=0 \
-		camera2.portability.force_api=1
-
-# Charging
+# Charger
 PRODUCT_PACKAGES += \
     charger_res_images
 
@@ -143,9 +99,6 @@ PRODUCT_PACKAGES += \
     cneapiclient \
     com.quicinc.cne \
     services-ext
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
 
 # Dex2oat Hacks
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -170,23 +123,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-		ro.sf.lcd_density=640 \
-		debug.egl.hw=1 \
-		debug.gralloc.enable_fb_ubwc=1 \
-		debug.sf.hw=1 \
-		dev.pm.dyn_samplingrate=1 \
-		persist.demo.hdmirotationlock=false \
-		persist.hwc.enable_vds=1 \
-		persist.sys.wfd.virtual=0 \
-		ro.opengles.version=196610 \
-		ro.qcom.ad=1 \
-		ro.qcom.ad.calib.data=/system/etc/calib.cfg \
-		ro.qcom.ad.sensortype=2 \
-		ro.qualcomm.display.paneltype=1 \
-		sdm.debug.disable_rotator_split=1 \
-		sdm.perf_hint_window=50
-
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
 
@@ -205,10 +141,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
-# Gesture Handler
-PRODUCT_PACKAGES += \
-   GestureHandler
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8996 \
@@ -225,11 +157,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-		persist.gps.qc_nlp_in_use=1 \
-		persist.loc.nlp_name=com.qualcomm.location \
-		ro.gps.agps_provider=1
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -287,13 +214,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-		  media.aac_51_output_enabled=true \
-			drm.service.enabled=1 \
-	    vidc.debug.perf.mode=2 \
-	    vidc.enc.disable.pq=true \
-	    vidc.enc.dcvs.extra-buff-count=2
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -314,28 +234,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
-#Partitions
-PRODUCT_PROPERTY_OVERRIDES += \
-		ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.bg_apps_limit=60 \
-		ro.vendor.extension_library=libqti-perfd-client.so \
-	  ro.min_freq_0=307200 \
-	  ro.min_freq_4=307200
-
 # Power HAL
-PRODUCT_PACKAGES += \
+ PRODUCT_PACKAGES += \
      power.msm8996
-
-# Qualcomm support
-PRODUCT_PROPERTY_OVERRIDES += \
-	  persist.timed.enable=true
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -355,53 +256,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-PRODUCT_PROPERTY_OVERRIDES += \
-     DEVICE_PROVISIONED=1 \
-     persist.data.qmi.adb_logmask=0 \
-		 persist.data.mode=concurrent \
-     persist.data.netmgrd.qos.enable=true \
-     persist.data.df.agg.dl_pkt=10 \
-     persist.data.df.agg.dl_size=4096 \
-     persist.data.df.dev_name=rmnet_usb0 \
-     persist.data.df.dl_mode=5 \
-     persist.data.df.iwlan_mux=9 \
-     persist.data.df.mux_count=8 \
-     persist.data.df.ul_mode=5 \
-     persist.data.wda.enable=true \
-     persist.dpm.feature=0 \
-     persist.net.doxlat=false \
-     persist.radio.add_power_save=1 \
-     persist.radio.apm_sim_not_pwdn=1 \
-     persist.radio.csvt.enabled=false \
-     persist.radio.custom_ecc=1 \
-     persist.radio.flexmap_type=disabled \
-     persist.radio.hw_mbn_update=1 \
-     persist.radio.mt_sms_ack=20 \
-     persist.radio.multisim.config=dsds \
-     persist.radio.sap_silent_pin=true \
-     persist.radio.sib16_support=1 \
-     persist.radio.start_ota_daemon=0 \
-     persist.radio.sw_mbn_openmkt=1 \
-     persist.radio.sw_mbn_update=1 \
-     persist.radio.sw_mbn_volte=1 \
-     persist.rild.nitz_long_ons_0="" \
-     persist.rild.nitz_long_ons_1="" \
-     persist.rild.nitz_long_ons_2="" \
-     persist.rild.nitz_long_ons_3="" \
-     persist.rild.nitz_plmn="" \
-     persist.rild.nitz_short_ons_0="" \
-     persist.rild.nitz_short_ons_1="" \
-     persist.rild.nitz_short_ons_2="" \
-     persist.rild.nitz_short_ons_3="" \
-		 persist.rmnet.data.enable=true \
-		 persist.sys.ssr.restart_level=ALL_ENABLE \
-		 persist.sys.ztelog.enable=0 \
-     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-     ril.subscription.types=NV,RUIM \
-     ro.telephony.call_ring.multiple=false \
-     ro.telephony.default_network=10,10 \
-		 ro.use_data_netmgrd=true
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8996
@@ -416,16 +270,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-		ro.qti.sensors.dev_ori=false \
-		ro.qti.sensors.pmd=false \
-		ro.qti.sensors.sta_detect=false \
-		ro.qti.sensors.mot_detect=false
-
-# Tethering
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -460,13 +304,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
-
 # VR
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
-
 
 $(call inherit-product-if-exists, vendor/zte/axon7/axon7-vendor.mk)
 
