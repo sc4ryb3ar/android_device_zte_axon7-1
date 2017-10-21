@@ -186,7 +186,6 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_POWERHAL_VARIANT := voxpopuli
 TARGET_USES_INTERACTION_BOOST := true
 -include device/voxpopuli/sepolicy/sepolicy.mk
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.msm8996
 
 # Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
