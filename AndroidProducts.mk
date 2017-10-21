@@ -16,36 +16,25 @@ $(call inherit-product, vendor/pure/configs/pure_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := axon7
-PRODUCT_NAME := aosp_axon7
-PRODUCT_BRAND := ZTE
-PRODUCT_MODEL := ZTE A2017U
-PRODUCT_MANUFACTURER := ZTE
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="P996A01_N" \
-    BUILD_FINGERPRINT="ZTE/P996A01_N/ailsa_ii:7.0/NRD90M/20170128.052618:user/release-keys" \
-    PRIVATE_BUILD_DESC="P996A01_N-user 7.0 NRD90M 20170128.052618 release-keys"
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # ANT
 PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+		AntHalService \
+		com.dsi.ant.antradio_library \
+		libantradio
 
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
+		external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    libaudio-resampler \
+		audio.a2dp.default \
+		audio.r_submix.default \
+		audio.usb.default \
+		libaudio-resampler \
     libvolumelistener \
     tinymix \
     audio_amplifier.msm8996 \
@@ -141,8 +130,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 		persist.camera.preview.ubwc=0 \
 		persist.camera.video.ubwc=0 \
 		persist.camera.stats.test=5 \
-		camera.disable_zsl_mode=1
-		#camera2.portability.force_api=1
+		persist.camera.HAL3.enabled=1 \
+		camera.disable_zsl_mode=0 \
+		camera2.portability.force_api=1
 
 # Charging
 PRODUCT_PACKAGES += \
@@ -290,15 +280,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-		$(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media_codecs_dolby.xml:system/etc/media_codecs_dolby.xml \
     $(LOCAL_PATH)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     $(LOCAL_PATH)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    $(LOCAL_PATH)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+    $(LOCAL_PATH)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
 		  media.aac_51_output_enabled=true \
+			drm.service.enabled=1 \
 	    vidc.debug.perf.mode=2 \
 	    vidc.enc.disable.pq=true \
 	    vidc.enc.dcvs.extra-buff-count=2
@@ -340,7 +331,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-	  power.msm8996
+     power.msm8996
 
 # Qualcomm support
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -353,6 +344,10 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_axon7
+
+# Prebuilts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/org.apache.http.legacy.jar:system/framework/org.apache.http.legacy.jar
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -474,3 +469,15 @@ PRODUCT_COPY_FILES += \
 
 
 $(call inherit-product-if-exists, vendor/zte/axon7/axon7-vendor.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := axon7
+PRODUCT_NAME := aosp_axon7
+PRODUCT_BRAND := ZTE
+PRODUCT_MODEL := ZTE A2017U
+PRODUCT_MANUFACTURER := ZTE
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="P996A01_N" \
+    BUILD_FINGERPRINT="ZTE/P996A01_N/ailsa_ii:7.0/NRD90M/20170128.052618:user/release-keys" \
+    PRIVATE_BUILD_DESC="P996A01_N-user 7.0 NRD90M 20170128.052618 release-keys"
